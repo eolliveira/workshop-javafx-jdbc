@@ -5,17 +5,20 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.control.ScrollPane;
 
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
-			Parent parent = loader.load();
-			Scene mainScene = new Scene(parent);
+			ScrollPane scrollpane = loader.load();
+			
+			scrollpane.setFitToHeight(true);
+			scrollpane.setFitToWidth(true);
+			
+			Scene mainScene = new Scene(scrollpane);
 			primaryStage.setScene(mainScene);
 			primaryStage.setTitle("Sample JavaFX application");
 			primaryStage.show();
