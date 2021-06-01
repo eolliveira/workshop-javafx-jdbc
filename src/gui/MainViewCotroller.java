@@ -8,7 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.MenuItem;
 
 public class MainViewCotroller implements Initializable {
-
+	
 	@FXML
 	private MenuItem menuItemSeller;
 	
@@ -36,5 +36,4 @@ public class MainViewCotroller implements Initializable {
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 	}
-
 }
